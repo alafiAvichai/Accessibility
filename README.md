@@ -8,6 +8,16 @@ To use Accessibily in your website, simply drop the script into your last line d
 
 ```html
 <script src="https://gitcdn.xyz/repo/alafiAvichai/Hello-World/master/accessibilityScript.js"></script>
- 
 ```
 
+look like this
+
+```html
+<body>
+ 
+ 
+ 
+ 
+ <script src="https://gitcdn.xyz/repo/alafiAvichai/Hello-World/master/accessibilityScript.js"></script>
+ </body>
+```
