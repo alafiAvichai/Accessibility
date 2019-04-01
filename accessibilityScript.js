@@ -157,7 +157,7 @@ allLi += '<li class="accessibileLi"><a class="aTagAccessibility" href="#" id="Co
 allLi += '<li class="accessibileLi"><a class="aTagAccessibility" href="#" id="whitBackroundAccessibility">רקע בהיר <i class="fas fa-chalkboard"></i></a></li>';
 allLi += '<li class="accessibileLi"><a class="aTagAccessibility" href="#" id="boltLinkAccessibility">הדגשת קישורים<i class="fas fa-link"></i></a></li>';
 allLi += '<li class="accessibileLi"><a class="aTagAccessibility" href="#" id="readFontAccessibility">פונט קריא <i class="fas fa-font"></i></a></li>';
-allLi += '<li class="accessibileLi"><a class="aTagAccessibility" href="#" id="resetAccessibility">איפוס גודל פונט <i class="fas fa-undo-alt"></i></a></li>'
+allLi += '<li class="accessibileLi"><a class="aTagAccessibility" href="#" id="resetAccessibility">איפוס<i class="fas fa-undo-alt"></i></a></li>'
 ul.innerHTML = allLi;
 
 var li = document.getElementsByClassName("accessibileLi");
