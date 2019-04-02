@@ -220,7 +220,7 @@ bigFontAccessibility.onclick = function () {
     if (bodyFontSize <= 38) {
         bodyFontSize += 2;
         body.style.fontSize = bodyFontSize + "px"
-        console.log(bodyFontSize);
+        
     }
 }
 
@@ -230,7 +230,7 @@ smallFontAccessibility.onclick = function () {
     if (bodyFontSize >= 12) {
         bodyFontSize -= 2;
         body.style.fontSize = bodyFontSize + "px"
-        console.log(bodyFontSize);
+        
     }
 }
 
