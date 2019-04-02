@@ -13,38 +13,38 @@ head.innerHTML += fontAwesome;
 var style = document.createElement("style");
 
 style.innerHTML = `.bodyColor-Contrast {
-                        background-color: rgb(12, 12, 12);
-                        color: #0072e4;
+                        background-color: rgb(12, 12, 12) !important;
+                        color: #0072e4 !important;
                     }
                     
                     .button-Contrast {
-                        background: rgb(114, 0, 19);
-                        color: white;
-                        border: 1px solid red;
+                        background: rgb(114, 0, 19) !important;
+                        color: white !important;
+                        border: 1px solid red !important;
                     }
 
                     .bodyColor-Contrast-reverse {
-                        background-color: rgb(12, 12, 12);
-                        color: #f1e100;
+                        background-color: rgb(12, 12, 12) !important;
+                        color: #f1e100 !important;
                     }
                     
                     .button-bodyColor-Contrast-reverse {
-                        background-color: rgb(12, 12, 12);
-                        color: #f1e100;
-                        border: 1px solid white;
+                        background-color: rgb(12, 12, 12) !important;
+                        color: #f1e100 !important;
+                        border: 1px solid white !important;
                     }
                     
                     .white-background {
-                        background: white;
-                        color: rgb(0, 0, 0) !important;
+                        background: white !important;
+                        color: rgb(0, 0, 0) !important !important;
                     }
                     
                     .link-bolt {
-                        text-decoration: underline;
+                        text-decoration: underline !important;
                     }
                     
                     .read-font {
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: Arial, Helvetica, sans-serif !important;
                     }
                     
                     `;
@@ -85,7 +85,7 @@ containerDivAccissebility.style.minWidth = "175px"
 containerDivAccissebility.style.minHeight = "175px"
 containerDivAccissebility.style.position = "fixed"
 containerDivAccissebility.style.top = "35%";
-containerDivAccissebility.style.left = "0.5%";
+containerDivAccissebility.style.left = "0%";
 document.body.append(containerDivAccissebility)
 
 
