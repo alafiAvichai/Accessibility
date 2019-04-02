@@ -7,7 +7,7 @@
 To use Accessibily in your website, simply drop the script into your last line document's `<body>`.
 
 ```html
-<script src="https://raw.githubusercontent.com/alafiAvichai/Accessibility/master/accessibilityScript.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alafiAvichai/Accessibility/accessibilityScriptA.js"></script>
 ```
 
 look like this
@@ -18,6 +18,6 @@ look like this
  
  
  
- <script src="https://raw.githubusercontent.com/alafiAvichai/Accessibility/master/accessibilityScript.js"></script>
+ <script src="https://cdn.jsdelivr.net/gh/alafiAvichai/Accessibility/accessibilityScriptA.js"></script>
  </body>
 ```
