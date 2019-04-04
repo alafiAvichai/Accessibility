@@ -1,29 +1,3 @@
-/*
-next
-next
-next
-next
-next
-next
-next
-
-    font size + and - to:
-
-    buttons
-    <a>
-
-
-next
-next
-next
-next
-next
-next
-next
-*/
-
-
-
 /* ----------------------------------
 
 // add FontAwesome to <head>
@@ -119,9 +93,8 @@ if (typeof (h1[0]) != 'undefined' && h1[0] != null) {
     var h1Arr = [];
     for (var i = 0; i < h1.length; i++) {
 
-        var h1FontSize = window.getComputedStyle(h1[0]).fontSize;
+        var h1FontSize = window.getComputedStyle(h1[i]).fontSize; // get all css property
         h1Arr.push(h1FontSize);
-
 
     }
 }
@@ -132,7 +105,7 @@ if (typeof (h2[0]) != 'undefined' && h2[0] != null) {
 
     for (var i = 0; i < h2.length; i++) {
 
-        var h2FontSize = window.getComputedStyle(h2[0]).fontSize;
+        var h2FontSize = window.getComputedStyle(h2[i]).fontSize;
         h2Arr.push(h2FontSize);
 
     }
@@ -144,7 +117,7 @@ if (typeof (h3[0]) != 'undefined' && h3[0] != null) {
 
     for (var i = 0; i < h3.length; i++) {
 
-        var h3FontSize = window.getComputedStyle(h3[0]).fontSize;
+        var h3FontSize = window.getComputedStyle(h3[i]).fontSize;
         h3Arr.push(h3FontSize);
     }
 }
@@ -155,7 +128,7 @@ if (typeof (h4[0]) != 'undefined' && h4[0] != null) {
 
     for (var i = 0; i < h4.length; i++) {
 
-        var h4FontSize = window.getComputedStyle(h4[0]).fontSize;
+        var h4FontSize = window.getComputedStyle(h4[i]).fontSize;
         h4Arr.push(h4FontSize);
     }
 }
@@ -166,7 +139,7 @@ if (typeof (h5[0]) != 'undefined' && h5[0] != null) {
 
     for (var i = 0; i < h5.length; i++) {
 
-        var h5FontSize = window.getComputedStyle(h5[0]).fontSize;
+        var h5FontSize = window.getComputedStyle(h5[i]).fontSize;
         h5Arr.push(h5FontSize);
     }
 }
@@ -176,21 +149,42 @@ if (typeof (h6[0]) != 'undefined' && h6[0] != null) {
 
     for (var i = 0; i < h6.length; i++) {
 
-        var h6FontSize = window.getComputedStyle(h6[0]).fontSize;
+        var h6FontSize = window.getComputedStyle(h6[i]).fontSize;
         h6Arr.push(h6FontSize);
     }
 }
+
+
+
+// <a> tag
+
+if (typeof (aTag[0]) != 'undefined' && aTag[0] != null) {
+    var aTagArr = [];
+    for (var i = 0; i < aTag.length; i++) {
+        var aTagFontSize = window.getComputedStyle(aTag[i]).fontSize;
+        aTagArr.push(aTagFontSize);
+    }
+}
+
 
 // <p> tag
 
 if (typeof (paraTag[0]) != 'undefined' && paraTag[0] != null) {
     var paraTagArr = [];
     for (var i = 0; i < paraTag.length; i++) {
-        var paraTagFontSize = window.getComputedStyle(paraTag[0]).fontSize;
+        var paraTagFontSize = window.getComputedStyle(paraTag[i]).fontSize;
         paraTagArr.push(paraTagFontSize);
     }
+}
 
+// <button> tag
 
+if (typeof (buttonTag[0]) != 'undefined' && buttonTag[0] != null) {
+    var buttonTagArr = [];
+    for (var i = 0; i < buttonTag.length; i++) {
+        var buttonTagFontSize = window.getComputedStyle(buttonTag[i]).fontSize;
+        buttonTagArr.push(buttonTagFontSize);
+    }
 }
 
 
@@ -436,6 +430,26 @@ bigFontAccessibility.onclick = function (event) {
     }
 
 
+
+    // <a> tag chenge size 
+
+    for (var i = 0; i < aTag.length; i++) {
+        var aTagFontSize = window.getComputedStyle(aTag[i]);
+        var aTagFontSizeOnlyNum = parseFloat(aTagFontSize.fontSize);
+
+        aTag[i].style.fontSize = aTagFontSize.fontSize;
+        aTagFontSizeOnlyNum += 2;
+        aTag[i].style.fontSize = aTagFontSizeOnlyNum + "px"
+
+        for(var i = 0; i< aTagAccessibility.length ; i++){
+            var aTagAccessibilityFontSize = window.getComputedStyle(aTagAccessibility[i]);
+   
+            aTagAccessibility[i].style.fontSize = aTagAccessibilityFontSize.fontSize;
+        }
+
+    }
+
+
     // <p> tag chenge size 
 
     for (var i = 0; i < paraTag.length; i++) {
@@ -445,6 +459,19 @@ bigFontAccessibility.onclick = function (event) {
         paraTag[i].style.fontSize = paraTagFontSize.fontSize;
         paraTagFontSizeOnlyNum += 2;
         paraTag[i].style.fontSize = paraTagFontSizeOnlyNum + "px"
+    }
+
+    // <button> tag
+
+    for (var i = 0; i < buttonTag.length; i++) {
+        var buttonTagFontSize = window.getComputedStyle(buttonTag[i]);
+        var buttonTagFontSizeOnlyNum = parseFloat(buttonTagFontSize.fontSize);
+
+        buttonTag[i].style.fontSize = buttonTagFontSize.fontSize;
+        buttonTagFontSizeOnlyNum += 2;
+        buttonTag[i].style.fontSize = buttonTagFontSizeOnlyNum + "px"
+
+        accessibilityBtn.style.fontSize = "36px";
     }
 
     event.preventDefault()
@@ -525,6 +552,25 @@ smallFontAccessibility.onclick = function (event) {
     }
 
 
+    // <a> tag chenge size
+
+    for (var i = 0; i < aTag.length; i++) {
+        var aTagFontSize = window.getComputedStyle(aTag[i]);
+        var aTagFontSizeOnlyNum = parseFloat(aTagFontSize.fontSize);
+
+        aTag[i].style.fontSize = aTagFontSize.fontSize;
+        aTagFontSizeOnlyNum -= 2;
+        aTag[i].style.fontSize = aTagFontSizeOnlyNum + "px"
+
+        for(var i = 0; i< aTagAccessibility.length ; i++){
+            var aTagAccessibilityFontSize = window.getComputedStyle(aTagAccessibility[i]);
+   
+            aTagAccessibility[i].style.fontSize = aTagAccessibilityFontSize.fontSize;
+        }
+
+    }
+
+
     // <p> tag chenge size 
 
     for (var i = 0; i < paraTag.length; i++) {
@@ -535,6 +581,20 @@ smallFontAccessibility.onclick = function (event) {
         paraTagFontSizeOnlyNum -= 2;
         paraTag[i].style.fontSize = paraTagFontSizeOnlyNum + "px"
     }
+
+    // <button> tag
+
+    for (var i = 0; i < buttonTag.length; i++) {
+        var buttonTagFontSize = window.getComputedStyle(buttonTag[i]);
+        var buttonTagFontSizeOnlyNum = parseFloat(buttonTagFontSize.fontSize);
+
+        buttonTag[i].style.fontSize = buttonTagFontSize.fontSize;
+        buttonTagFontSizeOnlyNum -= 2;
+        buttonTag[i].style.fontSize = buttonTagFontSizeOnlyNum + "px"
+
+        accessibilityBtn.style.fontSize = "36px";
+    }
+
 }
 
 /* ----------------------------------
@@ -930,11 +990,25 @@ resetAccessibility.onclick = function (event) {
         h6[i].style.fontSize = h6Arr[i];
     }
 
+
+    // <a> tag
+
+    for (var i = 0; i < aTag.length; i++) {
+        aTag[i].style.fontSize = aTagArr[i];
+    }
+
     // <p> tag
 
     for (var i = 0; i < paraTag.length; i++) {
         paraTag[i].style.fontSize = paraTagArr[i];
     }
+
+    // <button> tag
+
+    for (var i = 0; i < buttonTag.length; i++) {
+        buttonTag[i].style.fontSize = buttonTagArr[i];
+    }
+
 
     event.preventDefault()
 
