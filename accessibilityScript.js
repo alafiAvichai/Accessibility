@@ -62,7 +62,7 @@ style.innerHTML = `.bodyColor-Contrast {
                     
                     .white-background {
                         background: white !important;
-                        color: rgb(0, 0, 0) !important !important;
+                        color: rgb(0, 0, 0) !important;
                     }
                     
                     .link-bolt {
