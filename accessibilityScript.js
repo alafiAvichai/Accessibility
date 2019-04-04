@@ -1,26 +1,3 @@
-/*
-next
-next
-next
-next
-next
-next
-next
-
-    font size + and - to:
-
-    buttons
-    <a>
-
-
-next
-next
-next
-next
-next
-next
-next
-*/
 
 
 
@@ -339,6 +316,7 @@ for (var i = 0; i < li.length; i++) {
 
 for (var i = 0; i < aTagClass.length; i++) {
     aTagClass[i].style.color = "#333";
+    aTagClass[i].style.fontSize = "16px";
     aTagClass[i].style.textDecoration = "none";
 }
 
@@ -467,13 +445,16 @@ bigFontAccessibility.onclick = function (event) {
         aTagFontSizeOnlyNum += 2;
         aTag[i].style.fontSize = aTagFontSizeOnlyNum + "px"
 
-        for(var i = 0; i< aTagAccessibility.length ; i++){
-            var aTagAccessibilityFontSize = window.getComputedStyle(aTagAccessibility[i]);
-   
-            aTagAccessibility[i].style.fontSize = aTagAccessibilityFontSize.fontSize;
-        }
+        
 
     }
+
+    for(var i = 0; i < aTagClass.length; i++){
+
+       aTagClass[i].style.fontSize = "16px";
+        
+    }
+
 
 
     // <p> tag chenge size 
@@ -588,14 +569,14 @@ smallFontAccessibility.onclick = function (event) {
         aTagFontSizeOnlyNum -= 2;
         aTag[i].style.fontSize = aTagFontSizeOnlyNum + "px"
 
-        for(var i = 0; i< aTagAccessibility.length ; i++){
-            var aTagAccessibilityFontSize = window.getComputedStyle(aTagAccessibility[i]);
-   
-            aTagAccessibility[i].style.fontSize = aTagAccessibilityFontSize.fontSize;
-        }
-
     }
 
+
+    for(var i = 0; i < aTagClass.length; i++){
+
+        aTagClass[i].style.fontSize = "16px";
+         
+     }
 
     // <p> tag chenge size 
 
