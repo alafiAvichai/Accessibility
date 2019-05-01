@@ -493,7 +493,6 @@ smallFontAccessibility.onclick = function (event) {
     if (bodyFontSize >= 12) {
         bodyFontSize -= 2;
         body.style.fontSize = bodyFontSize + "px"
-        console.log(bodyFontSize);
     }
 
     for (var i = 0; i < h1.length; i++) {
